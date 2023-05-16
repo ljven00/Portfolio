@@ -4,9 +4,10 @@
 const root = $(":root");
 const section = $("section");
 const themeBtn = $("#theme");
+const home = $("#home");
 
 $(document).ready(function(){
-
+    
     section.on({
         mouseenter: function(){
             let id = $(this).attr("id");
@@ -31,5 +32,6 @@ $(document).ready(function(){
             $("#theme-icon").removeClass("fa-sun").addClass("fa-circle-half-stroke");
         }
     });
-    
+   
+
 });
