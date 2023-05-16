@@ -4,111 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <script src="https://kit.fontawesome.com/d042d36122.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Jean Venaldo's Porfolio</title>
+    <title>Jean's Portfolio</title>
 </head>
 <body>
-    <header>
-        <i id="theme" class="fa-solid fa-circle-half-stroke"></i>
-        <a href="#">Jean Louissaint</a>
-        <i class="fa-solid fa-bars"></i>
-    </header>
     <nav class="nav-wrapper">
-        <i class="fa-solid fa-caret-left"></i>
-        <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Work</a></li>
-            <li><a href="">Languages</a></li>
-            <li><a href="">Skills</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact</a></li>
+        <ul class="nav-list">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="">
+                    Resume 
+                    <i class="fa-regular fa-circle-down"></i>
+                </a>
+            </li>           
         </ul>
     </nav>
     <main>
-        <section class="about-me">
+        <section id="home">
+            <h1>I am</h1>
+            <h1>Jean Venaldo</h1>
+            <h1>Louissaint,</h1>
+            <h1>developer</h1>
+        </section>
+        <section id="about">
             <h2>About me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut similique accusamus eum alias nam reprehenderit accusantium temporibus! Nisi, mollitia cumque architecto dicta fuga deserunt? Quisquam illo voluptatum eius. Vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, delectus, adipisci veniam quo reiciendis expedita atque asperiores quae rerum facere. Quos deserunt debitis quia rem blanditiis in molestias recusandae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut similique accusamus eum alias nam reprehenderit accusantium temporibus! Nisi, mollitia cumque architecto dicta fuga deserunt? Quisquam illo voluptatum eius. Vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus omnis, delectus, adipisci veniam quo reiciendis expedita atque asperiores quae rerum facere. Quos deserunt debitis quia rem blanditiis in molestias recusandae. </p>
         </section>
-        <section class="edu">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    La Salle Bajio University
-                    <ul>
-                        <li>Electronics and Telecommunication Engineering</li>
-                    </ul>
-                </li>
-                <li>
-                    Utel
-                    <ul>
-                        <li>Computer Systems Engineering</li>
-                    </ul>
-                </li>
-                <li>
-                    University of the People
-                    <ul>
-                        <li>BS of Computer Science</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section class="work">
-            <h2>Work Experience</h2>
-            <ul>
-                <li>
-                    Volunteering
-                    <ul>
-                        <li>
-                            Matrix-NG
-                            <ul>
-                                <li>Secretary Assistant</li>
-                                <li>Task Manager</li>
-                                <li>Spokesperson</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    Freelance
-                </li>
-                <li>
-                    Contract
-                    <ul>
-                        <li>
-                            Aurora Coop
-                            <ul>
-                                <li>Production Operator II</li>
-                            </ul>
-                        </li>
-                        <li>
-                            TTEC
-                            <ul>
-                                <li>Bilingual Customer Representative</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Telus International
-                            <ul>
-                                <li>Trilingual Customer Representative</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-        <section class="languages">
-            <h2>Languages</h2>
-            <ul>
-                <li>Haitian Creole</li>
-                <li>French</li>
-                <li>Spanish</li>
-                <li>English</li>
-                <li>Portuguese</li>
-            </ul>
-        </section>
-        <section class="skills">
+        <section id="skills">
             <h2>Skills</h2>
             <ul>
                 <li>
@@ -149,18 +79,86 @@
                 </li>
             </ul>
         </section>
-        <section class="projects">
-            <h2>Projects</h2>
-        </section>
-        <section class="certificates">
+        <section id="certificates" class="container">
             <h2>Certificates</h2>
+            <div class="wrapper">
+                <div class="wrap-content">
+                    <figure>
+                        <div class="img-wrapper">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <img class="img" src="testImage.jpg" alt="">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <figcaption>
+                            <h3>Advanced English</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit minus facere cum nihil. Ipsam ut omnis quae sint commodi, rerum mollitia nihil ea veritatis. Unde voluptatibus voluptatum suscipit rerum voluptates!</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                
+            </div>
         </section>
-        <section class="contact">
-            <h2>Contact me</h2>
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="wrapper">
+                <div class="wrap-content">
+                    <figure>
+                        <div class="img-wrapper">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <img class="img" src="testImage.jpg" alt="">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                        <figcaption>
+                            <h3>Fruits Count</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit minus facere cum nihil. Ipsam ut omnis quae sint commodi, rerum mollitia nihil ea veritatis. Unde voluptatibus voluptatum suscipit rerum voluptates!</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <div class="input-wrapper">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="phone">Tel.</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="input-wrapper">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="60" rows="10" ></textarea>
+                </div>
+                <button type="submit" id="send-btn">Send</button>
+            </form>
         </section>
     </main>
-    <footer>
-        <p>Copyright &copy; 2023 Jean Venaldo Louissaint</p>
-    </footer>
+    <aside>
+        <div class="aside-wrapper">
+            <div class="photo-wrapper"></div>
+            <div class="name">
+                <h2>Jean Venaldo</h2>
+                <h1>Louissaint</h1>
+            </div>
+            <div class="aside-nav-wrapper">
+                <p>Contents</p>
+                <ul class="aside-nav-list">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <button id="theme"><i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i> <span id="next-theme">Dark</span> Mode</button>
+        </div>
+    </aside>
 </body>
 </html>
