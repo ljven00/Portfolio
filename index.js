@@ -4,7 +4,16 @@
 const root = $(":root");
 const section = $("section");
 const themeBtn = $("#theme");
-const home = $("#home");
+const leftArrow = $(".fa-arrow-left");
+const rightArrow =$(".fa-arrow-right");
+const certificateEl = {
+    title: $("#certificates .title"),
+    desc: $("#certificates .desc")
+}
+const projectEl = {
+    title: $("#projects .title"),
+    desc: $("#projects .desc")
+}
 
 $(document).ready(function(){
     
@@ -35,3 +44,20 @@ $(document).ready(function(){
    
 
 });
+
+class Certificate{
+    constructor(name, url, description){
+        this.name = name;
+        this.url = url;
+        this.description = description;
+    }
+}
+
+class Projects{
+    constructor(name, url, description){
+        this.name = name;
+        this.url = url;
+        this.description = description;
+    }
+}
+

@@ -210,13 +210,17 @@
     color: var(--cta-color);
   }
   
-  .fa-arrow-left:hover,
   .fa-arrow-right:hover {
     cursor: pointer;
   }
   
   .fa-arrow-left {
     left: 10%;
+    opacity: 0.5;
+  }
+
+  .fa-arrow-left:hover{
+    cursor: not-allowed;
   }
   
   .fa-arrow-right {
@@ -335,6 +339,15 @@
     display: block;
 }
 
+.skill:hover .fa-angle-down{
+    transition: all 1s;
+    transform: rotate(-180deg);
+}
+
+.fa-angle-down{
+    float: right;
+}
+
 
   /* form */
   
@@ -362,6 +375,7 @@
     padding: .2em .8em;
     background-color: var(--main-color);
     color: var(--bg-color);
+    font-size: 1.1em;
   }
   
   
