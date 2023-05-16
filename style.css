@@ -282,8 +282,6 @@
     background-color: white;
     bottom: 0;
     left: 0;
-    /*opacity: 0;
-    transition: all .5s;*/
 }
 
 .skill-list li::after{
@@ -295,9 +293,8 @@
     bottom: 0;
     left: 0;
     z-index: 2;
-    /*opacity: 0;
-    transition: all 2s;*/
 }
+
  /* skill percentage */
 #html::after{
     width: 90%;
@@ -323,6 +320,10 @@
     width: 50%;
 }
 
+#mysql::after{
+    width: 75%;
+}
+
 #office::after, #gsuite::after, #ps::after{
     width: 70%;
 }
@@ -340,7 +341,7 @@
 }
 
 .skill:hover .fa-angle-down{
-    transition: all 1s;
+    transition: all .5s;
     transform: rotate(-180deg);
 }
 

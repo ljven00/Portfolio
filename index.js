@@ -6,6 +6,8 @@ const section = $("section");
 const themeBtn = $("#theme");
 const leftArrow = $(".fa-arrow-left");
 const rightArrow =$(".fa-arrow-right");
+const skill = $(".skill");
+
 const certificateEl = {
     title: $("#certificates .title"),
     desc: $("#certificates .desc")
