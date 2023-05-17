@@ -24,14 +24,30 @@
     background-color: var(--bg-color);
     color: var(--main-color);
   }
-  
-  
+   /* Header */
+
+   header{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: .5em 1em;
+   }
+
+#menu:hover{
+    cursor: pointer;
+}  
   /* navigation bar*/
   
+  #caret-left{
+    display: none;
+  }
+
+
   .nav-wrapper {
-    /*position: -webkit-sticky;
-    position: sticky;
-    top: 0;*/
     border-bottom: 2px solid var(--main-color);
     padding-left: 40%;
     height: 5vh;
@@ -254,6 +270,10 @@
    font-size: 1.3em;
 }
 
+.skills-wrapper{
+    padding: 0;
+}
+
 .skill{
     border: 1px solid var(--main-color);
     border-radius: 1em;
@@ -380,7 +400,7 @@
   }
   
   
-  
+  /* media querries */
   
   @media only screen and (min-width: 1280px){
       
@@ -401,4 +421,74 @@
           margin-left: min(40%, 500px);
       }
   
+  }
+
+  @media only screen and (max-width: 520px){
+
+    #home{
+        height: 100vh;
+    }
+
+    aside, nav{
+        display: none;
+    }
+
+    header{
+        display: flex;
+    }
+
+    .nav-wrapper{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding: 0;
+        box-shadow: -10px 0px 10px var(--shadow-color);
+        background-color: var(--bg-color);
+        z-index: 2;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 1em;
+        font-size: 1.2em;
+        gap: .8em;
+        margin: 0;
+      }
+
+    main{
+        overflow-y: scroll;
+        scroll-snap-type: initial;
+    }
+
+    section{
+        margin: 0;
+        padding: 0 1.5em;
+        height: auto;
+    }
+
+    section h2{
+        margin: 0;
+    }
+
+    .container h2, section{
+        margin-bottom: .5em;
+    }
+
+    form{
+        margin-bottom: .5em;
+    }
+
+    .nav-wrapper {
+        padding: 0;
+    }
+
+    #caret-left{
+        display: inherit;
+        text-align: center;
+    }
+
   }

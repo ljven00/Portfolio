@@ -1,12 +1,16 @@
 
 // min-width: 990px
 // max-width: 1480px
+
 const root = $(":root");
 const section = $("section");
 const themeBtn = $("#theme");
+const mobileTheme = $("#mobile-theme");
 const leftArrow = $(".fa-arrow-left");
 const rightArrow =$(".fa-arrow-right");
 const skill = $(".skill");
+const menu = $("#menu");
+let caretLeft = $("#caret-left");
 
 const certificateEl = {
     title: $("#certificates .title"),
@@ -44,6 +48,27 @@ $(document).ready(function(){
         }
     });
    
+    mobileTheme.click(function (){
+        root.toggleClass("dark");
+        if(root.attr("class") === "dark"){
+            $("#next-theme").text("Light");
+            $("#theme-icon").removeClass("fa-circle-half-stroke").addClass("fa-sun");
+            $("#mobile-theme-icon").removeClass("fa-circle-half-stroke").addClass("fa-sun");
+        }
+        else{
+            $("#next-theme").text("Dark");
+            $("#theme-icon").removeClass("fa-sun").addClass("fa-circle-half-stroke");
+            $("#mobile-theme-icon").removeClass("fa-sun").addClass("fa-circle-half-stroke");
+        }
+    });
+
+    menu.click(function(){
+        $("nav").show();
+    });
+
+    caretLeft.click(function() {
+        $("nav").hide();
+    });
 
 });
 
@@ -63,3 +88,21 @@ class Projects{
     }
 }
 
+/* Certificates
+inkscape
+Office
+Portugues
+Advanced English
+Photoshop
+Graphic Design
+HTML
+Google Drive
+*/
+
+const certificates = [
+    new Certificate(
+        "English",
+        "./certificates",
+        ""
+    )
+]
