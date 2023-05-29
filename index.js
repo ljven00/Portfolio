@@ -1,6 +1,13 @@
 
 // min-width: 990px
 // max-width: 1480px
+/*const typed = new Typed(".role", {
+    strings: ["front-end developer", "computer science student", "programmer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});*/
 
 const root = $(":root");
 const section = $("section");
@@ -70,6 +77,16 @@ $(document).ready(function(){
         $("nav").hide();
     });
 
+    skill.click(function(){
+        let el = $(this).find(".skill-list");
+        el.toggle();
+        if(el.css("display") === "block"){
+            $(".fa-angle-down").css("transform", "rotate(-180deg)");
+        }else{
+            $(".fa-angle-down").css("transform", "rotate(0deg)");
+        }
+    });
+
 });
 
 class Certificate{
@@ -89,14 +106,16 @@ class Projects{
 }
 
 /* Certificates
-inkscape
-Office
-Portugues
-Advanced English
-Photoshop
-Graphic Design
-HTML
-Google Drive
+inkscape *
+Office *
+Portugues *
+Advanced English *
+Photoshop *
+Graphic Design *
+HTML *
+Google Drive *
+Gestion de Projet *
+Rep Telefonico *
 */
 
 const certificates = [
