@@ -227,7 +227,7 @@ section h2 {
   font-size: 2em;
   transform: translateY(-50%);
   color: var(--cta-color);
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .fa-arrow-right:hover, .fa-arrow-left:hover {
@@ -236,15 +236,11 @@ section h2 {
 }
 
 .fa-arrow-left {
-  left: 10%;
-}
-
-.fa-arrow-left:hover{
-  cursor: not-allowed;
+  left: 5%;
 }
 
 .fa-arrow-right {
-  right: 10%;
+  right: 5%;
 }
 
 .img-wrapper:hover .fa-arrow-left,
@@ -254,6 +250,7 @@ section h2 {
 
 .img {
   width: 100%;
+  max-height: 70vh;
 }
 
 figure{
