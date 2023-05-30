@@ -1,13 +1,4 @@
-
-// min-width: 990px
-// max-width: 1480px
-/*const typed = new Typed(".role", {
-    strings: ["front-end developer", "computer science student", "programmer"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});*/
+import certificates from "./certificates.js";
 
 const root = $(":root");
 const section = $("section");
@@ -21,12 +12,18 @@ let caretLeft = $("#caret-left");
 
 const certificateEl = {
     title: $("#certificates .title"),
-    desc: $("#certificates .desc")
+    desc: $("#certificates .desc"),
+    img: $("#certificates .img")
 }
 const projectEl = {
     title: $("#projects .title"),
-    desc: $("#projects .desc")
+    desc: $("#projects .desc"),
+    img: $("#projects .img")
 }
+
+certificateEl.title.text(certificates[0].name)
+certificateEl.desc.text(certificates[0].desc)
+certificateEl.img.attr("src", certificates[0].url)
 
 $(document).ready(function(){
     
@@ -108,7 +105,8 @@ class Projects{
 /* Certificates
 inkscape *
 Office *
-Portugues *
+Portuguese I *
+Portuguese II *
 Advanced English *
 Photoshop *
 Graphic Design *
@@ -118,10 +116,3 @@ Gestion de Projet *
 Rep Telefonico *
 */
 
-const certificates = [
-    new Certificate(
-        "English",
-        "./certificates",
-        ""
-    )
-]
