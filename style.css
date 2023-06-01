@@ -64,7 +64,7 @@ body {
 }
 
 .nav-list a,
-.aside-nav-list a {
+.aside-nav-list a, .contact a {
   color: var(--main-color);
   text-decoration: none;
 }
@@ -115,7 +115,7 @@ aside {
   padding-left: 1em;
 }
 
-li a:hover {
+li a:hover, .contact a:hover {
   color: white;
 }
 
@@ -371,6 +371,31 @@ figcaption h3 {
   float: right;
 }
 
+/* Contact */
+
+.media-icon{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  margin-top: 2em;
+}
+
+.contact a{
+  font-size: 2em;
+}
+
+.contact a:hover{
+  border-bottom: 2px solid var(--cta-color);
+  box-shadow: 0 0 5px white;
+}
+
+
+.location iframe{
+  width: 100%;
+  max-width: 600px;
+  min-height: 300px;
+  border: none;
+}
 
 /* form */
 
