@@ -4,186 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" type="module" defer></script>
-    <script src="certificates.js" type="module" defer></script>
-    <script src="https://kit.fontawesome.com/d042d36122.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>Jean's Portfolio</title>
+    <script src="https://kit.fontawesome.com/d042d36122.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="module" src="App.js" defer></script>
+    <script type="module" src="index.js" defer></script>
 </head>
 <body>
-    <header>
-        <span id="mobile-theme">
-            <i id="mobile-theme-icon" class="fa-solid fa-circle-half-stroke"></i> <span>Theme</span>
-        </span>
-        <i class="fa-solid fa-bars" id="menu"></i>
-    </header>
-    <nav class="nav-wrapper">
-        <ul class="nav-list">
-            <li><i class="fa-solid fa-caret-left" id="caret-left"></i></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <a href="./Resume.pdf" target="_blank">
-                    Resume 
-                    <i class="fa-regular fa-circle-down"></i>
-                </a>
-            </li>           
-        </ul>
-    </nav>
-    <main>
-        <section id="home">
-            <h1>Hi! I am</h1>
-            <h1>Jean Venaldo</h1>
-            <h1>Louissaint,</h1>
-            <h1>front-end developer</h1>
-        </section>
-        <section id="about">
-            <h2>About me</h2>
-            <p>I am a young computer science student with a passion to learn new technologies and acquire experience in the programming field. I have a very diversified background, and I have interacted with various people from different cultures and background. In the industry I consider that to be a plus for anyone.</p>
-            <p>I like to solve problem and enjoy a good challenge. I pay attention to details, a very important skill for a programmer, on top of problem solving skills. I do my best everyday to keep practicing and enhance my skills, either in the programming field or in everyday life.</p>
-            <p>For the past years, I had been learning about programming, and I had been cultivating mi skills as well to make a good appearance in the tech industry. Now I feel ready to apply the skills I have learned to solve real world problems.</p>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-wrapper">
-                <li class="skill">
-                    Soft Skills <i class="fa-solid fa-angle-down"></i>
-                    <ul class="skill-list">
-                        <li>Leadership</li>
-                        <li>Problem Solving</li>
-                        <li>Time Management</li>
-                        <li>Empathy</li>
-                        <li>Communication Skills</li>
-                    </ul>
-                </li>
-                <li class="skill">
-                    Office Skills <i class="fa-solid fa-angle-down"></i>
-                    <ul class="skill-list">
-                        <li id="office">Microsoft Office Suite (Word, Excel, PowerPoint)</li>
-                        <li id="gsuite">GSuite (Docs, Sheet, Forms)</li>
-                    </ul>
-                </li>
-                <li class="skill">
-                    Programming Skills <i class="fa-solid fa-angle-down"></i>
-                    <ul class="skill-list">
-                        <li id="html">HTML</li>
-                        <li id="css">CSS</li>
-                        <li id="js">JavaScript</li>
-                        <li id="py">Python</li>
-                        <li id="java">Java</li>
-                        <li id="bash">Bash</li>
-                        <li id="git">Git</li>
-                        <li id="mysql">Mysql</li>
-                    </ul>
-                </li>
-                <li class="skill">
-                    Design Skills <i class="fa-solid fa-angle-down"></i>
-                    <ul class="skill-list">
-                        <li id="ps">Photoshop</li>
-                        <li id="inks">Inkscape</li>
-                    </ul>
-                </li>
+    <div id="app">
+        <header>
+            <i class="fa-solid fa-bars" id="menu"></i>
+            <span id="mobile-theme">
+                <i class="theme-icon fa-solid fa-circle-half-stroke"></i> 
+            </span>
+        </header>
+        <nav class="main-nav mobile-nav">
+            <ul class="nav-items">
+                <li>
+                    <a href="" target="_blank">
+                        Resume 
+                        <i class="fa-regular fa-circle-down"></i>
+                    </a>
+                </li>           
             </ul>
-        </section>
-        <section id="certificates" class="container">
-            <h2>Certificates</h2>
-            <div class="wrapper">
-                <div class="wrap-content">
+        </nav>
+        <aside class="wrap">
+            <div class="aside-wrapper">
+                <div class="profile">
+                    <img src="profile.jpg" alt="My profile picture">
+                </div>
+                <div class="name">
+                    <h2>Jean Venaldo</h2>
+                    <h1>Louissaint</h1>
+                </div>
+                <div class="aside-nav">
+                    <h3>Contents</h3>
+                    <ul class="nav-items"></ul>
+                </div>
+                <button id="theme">
+                    <i class="theme-icon fa-solid fa-circle-half-stroke"></i>
+                    <span id="next-theme">Dark</span> Mode
+                </button>
+            </div>
+        </aside>
+        <main class="main wrap">
+            <section id="home">
+                <h1>Hi! I am</h1>
+                <h1>Jean Venaldo</h1>
+                <h1>Louissaint,</h1>
+                <h1>front-end developer</h1>
+            </section>
+            <section id="about">
+                <h2>About me</h2>
+                <p>I am a young computer science student with a passion to learn new technologies and acquire experience in the programming field. I have a very diversified background, and I have interacted with various people from different cultures and background. In the industry I consider that to be a plus for anyone.</p>
+                <p>I like to solve problem and enjoy a good challenge. I pay attention to details, a very important skill for a programmer, on top of problem solving skills. I do my best everyday to keep practicing and enhance my skills, either in the programming field or in everyday life.</p>
+                <p>For the past years, I had been learning about programming, and I had been cultivating mi skills as well to make a good appearance in the tech industry. Now I feel ready to apply the skills I have learned to solve real world problems.</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul class="skills-wrapper"></ul>
+            </section>
+            <section id="certificates">
+                <h2>Certificates</h2>
+                <div class="gallery">
                     <figure>
-                        <div class="img-wrapper">
+                        <a href="" target="_blank"><img src="certificate-thumbnail.jpg" alt="certificate" id="certificate-img" ></a>
+                        <figcaption><span id="certificate-name">Certificate</span>
                             <i class="fa-solid fa-arrow-left"></i>
-                            <img class="img" src="certificate-thumbnail.jpg" alt="My certificate" cite="Gül Işık">
                             <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                        <figcaption>
-                            <h3 class="title">Advanced English</h3>
-                            <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit minus facere cum nihil. Ipsam ut omnis quae sint commodi, rerum mollitia nihil ea veritatis. Unde voluptatibus voluptatum suscipit rerum voluptates!</p>
                         </figcaption>
                     </figure>
                 </div>
-                
-            </div>
-        </section>
-        <section id="projects" class="container">
-            <h2>Projects</h2>
-            <div class="wrapper">
-                <div class="wrap-content">
-                    <figure>
-                        <div class="img-wrapper">
-                            <i class="fa-solid fa-arrow-left"></i>
-                            <a href=""><img class="img" src="project-thumbnail.jpg" alt="Laptop screen with some css code" cite="Lukas"></a>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
-                        <figcaption>
-                            <h3 class="title">Fruits Count</h3>
-                            <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit minus facere cum nihil. Ipsam ut omnis quae sint commodi, rerum mollitia nihil ea veritatis. Unde voluptatibus voluptatum suscipit rerum voluptates!</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="contact">
-                <div class="location">
-                    <h3>Location</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119096.38295666546!2d-101.74841248284322!3d21.122054017578456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbeffd6e6e721%3A0x606d95ec61a54327!2zTGXDs24sIMOJdGF0IGRlIEd1YW5hanVhdG8!5e0!3m2!1sfr!2smx!4v1685650172021!5m2!1sfr!2smx"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe>
-                </div>
-                <div class="media-icon">
-                    <a target="_blank" href="https://www.linkedin.com/in/jean-venaldo-louissaint-37a509232"><i class="fa-brands fa-linkedin"></i></a>
-                    <a target="_blank" href="https://github.com/ljven00"><i class="fa-brands fa-github"></i></a>
-                    <a target="_blank" href="mailto:ljvenaldo@outlook.com"><i class="fa-solid fa-envelope"></i></a>
-                    <a target="_blank" href="https://www.discordapp.com/users/671092191753535505"><i class="fa-brands fa-discord"></i></a>
-                    <a target="_blank" href="https://www.facebook.com/venaldo.louissaint"><i class="fa-brands fa-facebook"></i></a>
-                </div> 
-            </div>
-            <!--<form action="#" method="post">
-                <div class="input-wrapper">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="input-wrapper">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="input-wrapper">
-                    <label for="phone">Tel.</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="input-wrapper">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                </div>
-                <button type="submit" id="send-btn">Send</button>
-            </form>-->
-        </section>
-    </main>
-    <aside>
-        <div class="aside-wrapper">
-            <div class="photo-wrapper"></div>
-            <div class="name">
-                <h2>Jean Venaldo</h2>
-                <h1>Louissaint</h1>
-            </div>
-            <div class="aside-nav-wrapper">
-                <p>Contents</p>
-                <ul class="aside-nav-list">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certificates">Certificates</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li class="dropdown-box">
+                        Fruit Count 
+                        <i class="fa-solid fa-angle-down"></i>
+                        <p class="dropdown-items">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A voluptate eos optio sequi. Quae omnis consequuntur harum dolorem nesciunt quos provident. Illo cum earum veritatis deleniti minima corrupti. Delectus, corporis.
+                        </p>
+                    </li>
+                    <li class="dropdown-box">
+                        Fruit Count    
+                        <i class="fa-solid fa-angle-down"></i>
+                        <p class="dropdown-items">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A voluptate eos optio sequi. Quae omnis consequuntur harum dolorem nesciunt quos provident. Illo cum earum veritatis deleniti minima corrupti. Delectus, corporis.
+                        </p>
+                    </li>
+                    <li class="dropdown-box">
+                        Fruit Count
+                        <i class="fa-solid fa-angle-down"></i>
+                        <p class="dropdown-items">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. A voluptate eos optio sequi. Quae omnis consequuntur harum dolorem nesciunt quos provident. Illo cum earum veritatis deleniti minima corrupti. Delectus, corporis.
+                        </p>
+                    </li>
                 </ul>
-            </div>
-            <button id="theme"><i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i> <span id="next-theme">Dark</span> Mode</button>
-        </div>
-    </aside>
+            </section>
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <div class="contact">
+                    <div class="location">
+                        <h3>Location</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119096.38295666546!2d-101.74841248284322!3d21.122054017578456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbeffd6e6e721%3A0x606d95ec61a54327!2zTGXDs24sIMOJdGF0IGRlIEd1YW5hanVhdG8!5e0!3m2!1sfr!2smx!4v1685650172021!5m2!1sfr!2smx"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Location"></iframe>
+                    </div>
+                    <div class="media-icon">
+                        <a target="_blank" href="https://www.linkedin.com/in/jean-venaldo-louissaint-37a509232"><i class="fa-brands fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/ljven00"><i class="fa-brands fa-github"></i></a>
+                        <a target="_blank" href="mailto:ljvenaldo@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a target="_blank" href="https://www.discordapp.com/users/671092191753535505"><i class="fa-brands fa-discord"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/venaldo.louissaint"><i class="fa-brands fa-facebook"></i></a>
+                    </div> 
+                </div>
+            </section>
+        </main>
+        <footer>
+            <address>Copyright &copy; 2023 Jean Venaldo Louissaint</address>
+        </footer>
+    </div>
 </body>
 </html>
