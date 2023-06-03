@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
 }
@@ -153,9 +154,38 @@ a.active {
   border-bottom: 2px solid var(--cta-color);
 }
 
+li a{
+  transition: all 1000ms;
+  position: relative;
+  overflow: hidden;
+}
+
+li a:hover{
+  transition: all .5s;
+  transform: scale(1.1, 1.1);
+  box-shadow: 4px 5px 17px -4px var(--shadow-color);
+}
+
+li a::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--cta-color);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+li a:hover::before {
+  width: 100%;
+}
+
 nav li:hover{
   transition: all .5s;
-  transform: scale(1.1, 1.1) rotate(360deg);
+  transform: scale(1.1, 1.1);
+  box-shadow: 4px 5px 17px -4px var(--shadow-color);
 }
 
 /* main */
