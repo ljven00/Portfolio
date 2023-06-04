@@ -292,9 +292,9 @@ section{
 }
 
 figcaption{
-  margin-top: .5em;
+  margin-top: .8em;
   position: relative;
-  padding-bottom: .2em;
+  padding-bottom: .3em;
 }
 
 figure{
@@ -369,6 +369,10 @@ header, .dropdown-box, figcaption, h3{
 
 p, .nav-items a{
   font-size: 1.3em;
+}
+
+.dropdown-items{
+  font-size: 1em;
 }
 
 .name > *, #home >*{
