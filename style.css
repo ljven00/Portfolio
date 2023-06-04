@@ -29,7 +29,6 @@ body {
 
 body{
   height: 100vh;
-  /* overflow-y: hidden; */
 }
 
 /* ---------------------Layout-----------------*/
@@ -51,11 +50,11 @@ aside div > *, #home h1, body, figure{
   row-gap: 4em;
 }
 
-.aside-wrapper, aside, /*main,*/ section, .skills-wrapper, .media-icon, header, footer{
+.connect, .aside-wrapper, aside, /*main,*/ section, .skills-wrapper, .media-icon, header, footer{
   display: flex;
 }
 
-aside, header, .profile img, .media-icon, .dropdown-items li::before, .dropdown-items li::after, #certificates img{
+.connect, aside, header, .profile img, .media-icon, .dropdown-items li::before, .dropdown-items li::after, #certificates img{
   width: 100%;
 }
 
@@ -74,10 +73,18 @@ aside{
   margin-top: 1.8em;
 }
 
+.aside-wrapper{
+  max-width: 360px;
+}
+
+.connect{
+  justify-content: space-evenly;
+  gap: .5em;
+}
 
 main{
   grid-area: m;
-}sssss
+}
 
 footer{
   grid-area: f;
@@ -346,6 +353,16 @@ p, .skills-wrapper li:last-child, #projects li:last-child{
   margin-bottom: 0;
 }
 
+#email{
+  border: 2px solid var(--cta-color);
+  background-color: transparent;
+  color: var(--main-color);
+}
+
+.quick-intro p{
+  margin-top: .5em;
+}
+
 #home h1, h2, figcaption, .location{
   text-align: center;
 }
@@ -371,7 +388,7 @@ p, .nav-items a{
   font-size: 1.3em;
 }
 
-.dropdown-items{
+.dropdown-items, .quick-intro p{
   font-size: 1em;
 }
 
@@ -400,9 +417,13 @@ h2, h3{
   font-size: 2em;
 }
 
+
+a{
+  text-decoration: none;
+}
+
 .nav-items a, .contact a {
   color: var(--main-color);
-  text-decoration: none;
 }
 
 .contact a:hover{
@@ -414,17 +435,18 @@ a.active {
   border-bottom: 2px solid var(--cta-color);
 }
 
-button{
+.cta{
   border: none;
   font-size: 1em;
   font-weight: bold;
   padding: 0.7em 1.5em;
-  border-radius: 1.5em;
+  border-radius: .7em;
   color: var(--btn-color);
   background-color: var(--cta-color);
+  max-width: 200px;
 }
 
-#theme:hover{
+.cta:hover{
   outline: 2px solid var(--cta-color);
   outline-offset: 0.2em;
   box-shadow: 0 0 30px var(--cta-color);
@@ -473,6 +495,7 @@ button{
     height: auto;
     overflow: hidden;
     min-height: 600px;
+    padding: 1.5em;
   }
 
   .main{
@@ -547,6 +570,19 @@ button{
   section, aside{
     margin-left: auto;
     margin-right: auto;
+  }
+
+}
+
+@media screen and (max-height: 790px) {
+  
+  .profile{
+    width: 150px;
+    height: 150px;
+  }
+
+  body{
+    font-size: 14px;
   }
 
 }
