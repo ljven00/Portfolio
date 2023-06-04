@@ -5,9 +5,10 @@
 
 :root {
   --bg-color: #a2b2ee;
-  --main-color: #4e4f51;
+  --main-color: #26292B;
   --cta-color: #5f7adb;
-  --shadow-color: #838cad;
+  --shadow-color: #8191c9;
+  --shadow-color2: #c0ccf6;
   --btn-color: #a5b7f6;
   --header-bg: #acacac;
 }
@@ -16,10 +17,32 @@
   --bg-color: #26292b;
   --main-color: #acacac;
   --cta-color: #a2b2ee;
-  --shadow-color: #313233;
+  --shadow-color2: #232425;
+  --shadow-color: #3a4146;
   --btn-color: #2F448F;
   --header-bg: #5f7adb;
 }
+
+:root.classic {
+  --bg-color: #FDF0DF;
+  --main-color: #004A49;
+  --cta-color: #FFB000;
+  --shadow-color: #d6c8b5;
+  --shadow-color2: #ede3d5;
+  --btn-color: #FDF0DF;
+  --header-bg: #FFB000;
+}
+
+:root.dark.classic {
+  --bg-color: #004A49;
+  --main-color: #FDF0DF;
+  --cta-color: #FFC745;
+  --shadow-color2: #012a29;
+  --shadow-color: #086866;
+  --btn-color: #004A49;
+  --header-bg: #FFC745;
+}
+
 
 html,
 body {
@@ -58,7 +81,7 @@ aside div > *, #home h1, body, figure{
   width: 100%;
 }
 
-#menu, .theme-icon, button, .dropdown-box:hover{
+#menu, .mode-icon, button, .dropdown-box:hover{
   cursor: pointer;
 }
 
@@ -71,6 +94,7 @@ header{
 aside{
   grid-area: a;
   margin-top: 1.8em;
+  font-family: 'Inter', sans-serif;
 }
 
 .aside-wrapper{
@@ -84,6 +108,10 @@ aside{
 
 main{
   grid-area: m;
+}
+
+main h2, main h3, main h4{
+  font-family: "Inter", "sans-serif";
 }
 
 footer{
@@ -106,7 +134,7 @@ header, .aside-nav{
   height: 100vh;
   top: 40px;
   padding: 0 2.5em 0 .5em;
-  border-bottom: 2px solid var(--main-color);
+  background-color: var(--cta-color);
 }
 
 ul{
@@ -153,7 +181,7 @@ ul{
   border-left: 2px solid var(--cta-color);
 }
 
-li a:hover, .contact a:hover, .theme-icon:hover, #menu:hover{
+li a:hover, .mode-icon:hover, #menu:hover{
   color: white;
 }
 
@@ -204,6 +232,10 @@ section{
 #contact{
   margin-bottom: 0;
 }
+
+/* .contact a:hover{
+  color: ;
+} */
 
 /* skills */
 .skills-wrapper, figure, #projects ul, .location{
@@ -353,7 +385,7 @@ p, .skills-wrapper li:last-child, #projects li:last-child{
   margin-bottom: 0;
 }
 
-#email{
+#email, #theme{
   border: 2px solid var(--cta-color);
   background-color: transparent;
   color: var(--main-color);
@@ -428,7 +460,7 @@ a{
 
 .contact a:hover{
   border-bottom: 2px solid var(--cta-color);
-  border-top: 2px solid white;
+  border-top: 2px solid var(--main-color);
 }
 
 a.active {
@@ -476,15 +508,15 @@ a.active {
   aside{
     position: relative;
     min-height: 600px;
-    height: 80vh;
+    height: 83vh;
     padding: 1.5em 0;
     grid-area: a;
     align-items: center;
     margin-left: 2em;
     width: auto;
     border-radius: 2em;
-    box-shadow: 5px 5px 25px white,
-             -10px -10px 25px var(--shadow-color);
+    box-shadow: -5px -5px 25px inset var(--shadow-color2),
+             -10px -10px 10px var(--shadow-color);
     overflow: hidden;
   }
 
@@ -517,6 +549,9 @@ a.active {
     grid-area: n;
     position: static;
     height: auto;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    /* border-bottom: 2px solid var(--main-color); */
+    background-color: transparent;
   }
 
   .main-nav .nav-items{

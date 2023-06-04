@@ -9,7 +9,8 @@ const certificateEl = {
 const root = $(":root");
 const section = $("section");
 const themeBtn = $("#theme");
-const mobileTheme = $("#mobile-theme");
+const modeBtn = $("#mode");
+const mobileMode = $("#mobile-mode");
 const leftArrow = $(".fa-arrow-left");
 const rightArrow =$(".fa-arrow-right");
 const menu = $("#menu");
@@ -76,16 +77,24 @@ function updateCertificate(index){
     certificateEl.link.attr("href", certificates[index].url);
 }
 
-function updateTheme(){
+function updateMode(){
     root.toggleClass("dark");
-    if(root.attr("class") === "dark"){
-        $("#next-theme").text("Light");
-        $(".theme-icon").removeClass("fa-circle-half-stroke").addClass("fa-sun");
+    if(root.hasClass("dark")){
+        $("#next-mode").text("Light");
+        $(".mode-icon").removeClass("fa-circle-half-stroke").addClass("fa-sun");
     }
     else{
-        $("#next-theme").text("Dark");
-        $(".theme-icon").removeClass("fa-sun").addClass("fa-circle-half-stroke");
+        $("#next-mode").text("Dark");
+        $(".mode-icon").removeClass("fa-sun").addClass("fa-circle-half-stroke");
     }
+}
+
+function updateTheme(){
+    root.toggleClass("classic");
+    if(root.hasClass("classic"))
+        $("#next-theme").text("Cool");
+    else
+        $("#next-theme").text("Classic");
 }
 
 window.addEventListener("resize", function(){
@@ -116,11 +125,15 @@ $(document).ready(function(){
         }
     });
 
-    themeBtn.click(function (){
-        updateTheme();
+    modeBtn.click(function (){
+        updateMode();
     });
 
-    mobileTheme.click(function (){
+    mobileMode.click(function (){
+        updateMode();
+    });
+
+    themeBtn.click(function (){
         updateTheme();
     });
 
