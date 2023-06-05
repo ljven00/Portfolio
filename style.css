@@ -137,6 +137,20 @@ header, .aside-nav{
   background-color: var(--cta-color);
 }
 
+header .logo{
+  width: 2em;
+  height: 2em;
+}
+
+nav .logo{
+  display: none;
+  margin-left: 2em;
+}
+
+.logo{
+  margin-right: auto;
+}
+
 ul{
   list-style-type: none;
   padding: 0;
@@ -507,7 +521,7 @@ a.active {
 
   aside{
     position: relative;
-    min-height: 600px;
+    min-height: 400px;
     height: 83vh;
     padding: 1.5em 0;
     grid-area: a;
@@ -526,13 +540,13 @@ a.active {
     transform: translateY(-50%);
     height: auto;
     overflow: hidden;
-    min-height: 600px;
+    min-height: 350px;
     padding: 1.5em;
   }
 
   .main{
     height: 90vh;
-    min-height: 600px;
+    min-height: 500px;
     width: auto;
     grid-area: m;
     overflow-y: scroll;
@@ -541,6 +555,10 @@ a.active {
 
   footer{
     grid-area: f;
+  }
+
+  nav .logo{
+    display: block;
   }
 
   .main-nav{
@@ -609,15 +627,64 @@ a.active {
 
 }
 
-@media screen and (max-height: 790px) {
+
+@media screen and (max-height: 600px) {
+  
+  .profile{
+    width: 80px;
+    height: 80px;
+  }
+
+  html{
+    font-size: 12px;
+  }
+
+  p{
+    font-size: 1.1em;
+  }
+
+  aside{
+    height: 400px;
+  }
+
+  .aside-wrapper{
+    font-size: 10px;
+    gap: .5em;
+  }
+
+}
+
+
+@media screen and (max-height: 700px) {
+
+   html{
+    font-size: 12px;
+  }
+
+  p{
+    font-size: 1.1em;
+  }
+
+  aside{
+    height: 500px;
+  }
+
+  .aside-wrapper{
+    font-size: 11px;
+  } 
+
+}
+
+
+@media screen and (max-height: 780px) {
   
   .profile{
     width: 150px;
     height: 150px;
   }
 
-  body{
-    font-size: 14px;
+  html{
+    font-size: 12.5px;
   }
 
 }
