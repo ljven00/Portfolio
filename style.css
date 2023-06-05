@@ -127,6 +127,15 @@ header, .aside-nav{
   padding: 0 1.5em;
 }
 
+header .logo{
+  width: 2em;
+  height: 2em;
+}
+
+.logo{
+  margin-right: auto;
+}
+
 /* Nav */
 .main-nav{
   display: none;
@@ -135,6 +144,10 @@ header, .aside-nav{
   top: 40px;
   padding: 0 2.5em 0 .5em;
   background-color: var(--cta-color);
+}
+
+.main-nav .logo{
+  display: none;
 }
 
 ul{
@@ -552,6 +565,11 @@ a.active {
     box-shadow: 0 2px 5px var(--shadow-color);
     /* border-bottom: 2px solid var(--main-color); */
     background-color: transparent;
+  }
+
+  .main-nav .logo{
+    display: block;
+    margin-left: 2em;
   }
 
   .main-nav .nav-items{

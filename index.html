@@ -18,12 +18,14 @@
 <body>
     <div id="app">
         <header>
+            <img src="./logo.png" alt="D Design logo" class="logo">
             <i class="fa-solid fa-bars" id="menu"></i>
             <span id="mobile-mode">
                 <i class="mode-icon fa-solid fa-circle-half-stroke"></i> 
             </span>
         </header>
         <nav class="main-nav mobile-nav">
+            <img src="./logo.png" alt="D Design logo" class="logo">
             <ul class="nav-items">
                 <li>
                     <a href="Resume.pdf" target="_blank">
@@ -36,7 +38,10 @@
         <aside class="wrap">
             <div class="aside-wrapper">
                 <div class="profile">
-                    <img src="profile.jpg" alt="My profile picture">
+                    <picture>
+                        <source media="(max-width: 780px)" srcset="./profile-small.jpg">
+                        <img src="profile.jpg" alt="My profile picture">
+                    </picture>
                 </div>
                 <div class="name">
                     <h2>Jean Venaldo</h2>
