@@ -520,7 +520,7 @@ a.active {
 
   aside{
     position: relative;
-    min-height: 400px;
+    min-height: 350px;
     height: 83vh;
     padding: 1.5em 0;
     grid-area: a;
@@ -539,13 +539,13 @@ a.active {
     transform: translateY(-50%);
     height: auto;
     overflow: hidden;
-    min-height: 350px;
+    min-height: 300px;
     padding: 1.5em;
   }
 
   .main{
     height: 90vh;
-    min-height: 600px;
+    min-height: 500px;
     width: auto;
     grid-area: m;
     overflow-y: scroll;
@@ -642,8 +642,12 @@ a.active {
     font-size: 1.1em;
   }
 
+  .aside-wrapper{
+    gap: .5em;
+  }
+
   aside{
-    height: 450px;
+    height: 400px;
   }
 
   section{
@@ -652,18 +656,25 @@ a.active {
 
 }
 
-/* @media screen and (max-height: 700px) {
+@media screen and (max-height: 700px) {
   
-  .profile{
-    width: 150px;
-    height: 150px;
+  html, body{
+    font-size: 12px;
   }
 
-  body{
-    font-size: 14px;
+  aside{
+    font-size: 11px;
   }
 
-} */
+  p{
+    font-size: 1.3em;
+  }
+
+  aside{
+    height: 510px;
+  }
+
+}
 
 @media screen and (max-height: 790px) {
   
@@ -672,8 +683,12 @@ a.active {
     height: 150px;
   }
 
-  body{
+  html{
     font-size: 14px;
+  }
+
+  aside{
+    font-size: 13px;
   }
 
 }
