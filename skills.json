@@ -1,0 +1,39 @@
+{
+    "Design": [
+        "Figma",
+        "Inkscape",
+        "Photoshop"
+    ],
+    "Office": [
+        "GSuite (Docs, Sheet, Forms, Meet)",
+        "Microsoft Office Suite (Word, Excel, PowerPoint, Teams)"
+    ],
+    "Programming": [
+        "Bash",
+        "CSS",
+        "HTML",
+        "Git",
+        "Java",
+        "JavaScript",
+        "Python",
+        "mySQL",
+        "TypeScript"
+    ],
+    "Soft": [
+        "Communication Skills",
+        "Empathy",
+        "Leadership",
+        "Multitasking",
+        "Problem Solving",
+        "Time Management"
+    ],
+    "Tools & Framework": [
+        "Eclipse",
+        "jQuery",
+        "NPM",
+        "Pycharm",
+        "ReactJS",
+        "Vite",
+        "VSCode"
+    ]
+}

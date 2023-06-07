@@ -18,19 +18,19 @@
 <body>
     <div id="app">
         <header>
-            <img src="./logo.png" alt="D Design logo" class="logo">
+            <img src="./assets/logo.png" alt="D Design logo" class="logo">
             <i class="fa-solid fa-bars" id="menu"></i>
             <span id="mobile-mode">
                 <i class="mode-icon fa-solid fa-circle-half-stroke"></i> 
             </span>
         </header>
         <nav class="main-nav mobile-nav">
-            <img src="./logo.png" alt="D Design logo" class="logo">
+            <img src="./assets/logo.png" alt="D Design logo" class="logo">
             <ul class="nav-items">
                 <li>
                     <a href="Resume.pdf" target="_blank">
                         Resume 
-                        <i class="fa-regular fa-circle-down"></i>
+                        <i class="fa-solid fa-download"></i>
                     </a>
                 </li>           
             </ul>
@@ -39,8 +39,8 @@
             <div class="aside-wrapper">
                 <div class="profile">
                     <picture>
-                        <source media="(max-width: 780px)" srcset="./profile-small.jpg">
-                        <img src="profile.jpg" alt="My profile picture">
+                        <source media="(max-width: 780px)" srcset="./assets/profile-small.jpg">
+                        <img src="./assets/profile.jpg" alt="My profile picture">
                     </picture>
                 </div>
                 <div class="name">
@@ -66,7 +66,7 @@
                     <span id="next-mode">Dark</span> Mode
                 </button>
                 <button id="theme" class="cta">
-                    <span id="next-theme">Classic</span> Theme
+                    <span id="next-theme">Cool</span> Theme
                 </button>
             </div>
         </aside>
@@ -75,7 +75,7 @@
                 <h1>Hi! I am</h1>
                 <h1>Jean Venaldo</h1>
                 <h1>Louissaint,</h1>
-                <h1>front-end developer</h1>
+                <h1 id="profession">front-end developer</h1>
             </section>
             <section id="about">
                 <h2>About me</h2>
@@ -91,10 +91,13 @@
                 <h2>Certificates</h2>
                 <div class="gallery">
                     <figure>
-                        <a href="" target="_blank"><img src="certificate-thumbnail.jpg" alt="certificate" id="certificate-img" ></a>
-                        <figcaption><span id="certificate-name">Certificate</span>
-                            <i class="fa-solid fa-arrow-left"></i>
-                            <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" target="_blank"><img src="./assets/certificate-thumbnail.jpg" alt="certificate" id="certificate-img" ></a>
+                        <figcaption>
+                            <i class="fa-solid fa-angle-left"></i>
+                            <span id="certificate-name">
+                                Certificate
+                            </span>
+                            <i class="fa-solid fa-angle-right"></i>
                         </figcaption>
                     </figure>
                 </div>

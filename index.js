@@ -1,4 +1,4 @@
-import { navItems, skills, certificates, projects } from "./App.js";
+import { navItems, projects } from "./App.js";
 
 const angleDown = `<i class="fa-solid fa-angle-down"></i>`;
 const certificateEl = {
@@ -11,14 +11,39 @@ const section = $("section");
 const themeBtn = $("#theme");
 const modeBtn = $("#mode");
 const mobileMode = $("#mobile-mode");
-const leftArrow = $(".fa-arrow-left");
-const rightArrow =$(".fa-arrow-right");
+const leftArrow = $(".fa-angle-left");
+const rightArrow =$(".fa-angle-right");
 const menu = $("#menu");
+let skills;
+let certificates;
 let currCertificate = 0;
 let dropdown;
 let windowWidth = window.innerWidth;
 
+/** fetching skills data */
+fetch("./skills.json")
+    .then(response => response.json())
+    .then(data => {
+        skills = data;
+        updateSkills();
+        dropdown.click(function (){
+            let el = $(this).find(".dropdown-items");
+            el.toggle();
+            if(el.css("display") === "block"){
+                $(".fa-angle-down").css("transform", "rotate(-180deg)");
+            }else{
+                $(".fa-angle-down").css("transform", "rotate(0deg)");
+            }
+        });
+    })
 
+/** fetching certificates data */
+fetch("./certificates.json")
+    .then(response => response.json())
+    .then(data => {
+        certificates = data;
+        updateCertificate(currCertificate);
+    })
 
 /** 
  * Assigning the nav items 
@@ -65,6 +90,18 @@ function updateSkills(){
     dropdown = $(".dropdown-box");
 }
 
+/**
+ * 
+ * @param {string} name title of the docu
+ * @param {string} base the base url
+ * @param {string} ext the extension file
+ * @returns string path to the file
+ */
+function getPath(name, base, ext){
+    let path = name.toLowerCase().replaceAll(" ", "-");
+    return `${base}${path}.${ext}`
+}
+
 /** 
  * this function updates the content of
  * the certificate element
@@ -72,9 +109,12 @@ function updateSkills(){
  * the img path and the certificate name
 */
 function updateCertificate(index){
-    certificateEl.name.text(certificates[index].name);
-    certificateEl.img.attr("src", certificates[index].url);
-    certificateEl.link.attr("href", certificates[index].url);
+    let path = getPath(certificates[index].name, "./certificates/", "jpg");
+    let name = certificates[index].name;
+    certificateEl.name.text(name);
+    certificateEl.img.attr("src", path);
+    certificateEl.img.attr("alt", name);
+    certificateEl.link.attr("href", path);
 }
 
 function updateMode(){
@@ -90,11 +130,11 @@ function updateMode(){
 }
 
 function updateTheme(){
-    root.toggleClass("classic");
-    if(root.hasClass("classic"))
-        $("#next-theme").text("Cool");
-    else
+    root.toggleClass("cool");
+    if(root.hasClass("cool"))
         $("#next-theme").text("Classic");
+    else
+        $("#next-theme").text("Cool");
 }
 
 window.addEventListener("resize", function(){
@@ -107,10 +147,11 @@ window.addEventListener("resize", function(){
 });
 
 updateNav();
-updateSkills();
-updateCertificate(currCertificate);
+
+
 
 $(document).ready(function(){
+
     /* Toggle active class for each section */
     section.on({
         mouseenter: function(){
@@ -137,15 +178,7 @@ $(document).ready(function(){
         updateTheme();
     });
 
-    dropdown.click(function (){
-        let el = $(this).find(".dropdown-items");
-        el.toggle();
-        if(el.css("display") === "block"){
-            $(".fa-angle-down").css("transform", "rotate(-180deg)");
-        }else{
-            $(".fa-angle-down").css("transform", "rotate(0deg)");
-        }
-    });
+    
 
     rightArrow.click(function() {   
         if(currCertificate < certificates.length - 1){
