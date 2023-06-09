@@ -48,6 +48,7 @@ html,
 body {
   background-color: var(--bg-color); 
   color: var(--main-color);
+  font-family: 'Inter', sans-serif;
 }
 
 body{
@@ -402,6 +403,19 @@ figure{
   transform: translateX(-2px);
 }
 
+/* Projects */
+.project-checkout {
+  text-align: right;
+}
+
+.project-checkout a:visited{
+  color: var(--main-color);
+}
+
+.fa-up-right-from-square {
+  margin-left: auto;
+}
+
 /* Contact */
 .media-icon{
   justify-content: space-evenly;
@@ -451,7 +465,7 @@ header, .dropdown-box, figcaption, h3{
 }
 
 p, .nav-items a{
-  font-size: 1.3em;
+  font-size: 1.1rem;
 }
 
 .dropdown-items, .quick-intro p{
