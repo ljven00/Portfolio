@@ -307,6 +307,8 @@ section:hover h2::before{
   position: relative;
   margin-left: 0;
   padding: .2em 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dropdown-box:hover .fa-angle-down{
